@@ -26,7 +26,11 @@ end
 
 def single_letter(answer, guess)
   if answer.include?(guess)
-    return answer.index(guess)
+    index = answer.index(guess)
+    answer.count(guess).times do
+      number_of_occurrances = answer.index(guess, index)
+
+    end
   else
     return false
   end
